@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogados Brasileiros em Portugal - CPA Advogados</title>
+    <meta name="description" content="CPA Advogados oferece serviços jurídicos especializados em [Nome da Cidade]. Assessoria e consultoria jurídica para startups e empresas inovadoras.">
+    <meta name="keywords" content="advogados, serviços jurídicos, escritório de advocacia, Portugal, CP Advogados, Brasil">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CPA</h1>
+            <nav>
+                <button id="menu-toggle" class="menu-icon">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <div id="menu-list" class="menu">
+                    <!--<button class="close-button">&times;</button>-->
+                    <ul>
+                        <li><a href="#nosso-escritorio" class="sbtn">Nosso escritório</a></li>
+                        <li><a href="#especialidades" class="sbtn">Especialidades</a></li>
+                        <li><a href="#artigos" class="sbtn">Artigos | E-books</a></li>
+                        <li><a href="#footer" class="sbtn">Fale Conosco</a></li>
+                        <!--<li><a href="#https://api.whatsapp.com/send?phone=5534991462934" class="btn" target="_blank">Área do cliente</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <h2>Assessoria e Consultoria Jurídica para Brasileiros em Portugal</h2>
+                    <p>Mais que serviços jurídicos, geramos oportunidades e um diferencial competitivo para o seu sonho.</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="me_fa_a_uma_imagem_sobre_o_mundo_juridico_para_um_site_de_advocacia_realista_sem_humanos_apenas_os_livros_e_a_balan_a.png" alt="Equipe de advogados">
+            </div>
+        </section>
+        <section class="about" id="nosso-escritorio">
+            <div class="container">
+                <h2>Quem somos?</h2>
+                <p>Somos especialistas em atender brasileiros que residem em Portugal e necessitam de serviços jurídicos no Brasil.
+                    Nós, da CPA Advogados, somos especialistas em atender brasileiros que residem em Portugal e necessitam de serviços jurídicos no Brasil.
+                    Nosso time é composto por uma equipe qualificada, atualizada e especialista em Direito Empresarial, com foco em assessoria jurídica para Startups e Empresas Inovadoras, 
+                    atuando nessa área desde 2014. Ao longo desses anos, adquirimos grande experiência para auxiliar empreendedores a estruturar e escalar suas startups.</p>
+                <button>Saiba mais sobre a CPA</button>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="Me_fa_a_um_avatar_para_uma_advogada.png" alt="Carla Cristiane N e Pena">
+                        <h3>Carla Cristiane Nascimento e Pena</h3>
+                        <h3>OAB:123.345.345</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="especialidades">
+            <div class="container">
+                <div class="services-header">
+                    <h2>Especialidades</h2>
+                    <div class="services-tabs">
+                        <button class="tab active" onclick="showTab('Empresarial')">Empresarial</button>
+                        <button class="tab" onclick="showTab('empresas')">Empresas inovadoras</button>
+                        <button class="tab" onclick="showTab('trabalhista')">Trabalhista</button>
+                        <button class="tab" onclick="showTab('Tributario')">Tributario</button>
+                    </div>
+                </div>
+                <div class="tab-content" id="Empresarial">
+                    <div class="services-content">
+                        <div class="services-text">
+                            <h3>Empresarial</h3>
+                            <p>Abertura e encerramento de empresas, contratos.
+                            </p>
+                            <button>Saiba mais</button>
+                        </div>
+                        <div class="services-image">
+                            <img src="direito-empresarial.jpg" alt="Ilustração de startup">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="empresas" style="display: none;">
+                    <div class="services-content">
+                        <div class="services-text">
+                            <h3>Empresas Inovadoras</h3>
+                            <p>As Startups são conhecidas como empresas jovens, em busca de inovação, cujo modelo de negócios deve ser escalável e repetível. <br> 
+                                Todavia, pouco se fala sobre a necessidade que essas empresas têm de um acompanhamento jurídico estratégico. <br>
+                                Veja aqui a importância e os riscos que podem ser evitados. <br>
+                                O escritório possui advogados especialistas em Startups, <br>
+                                que oferecem assessoria completa englobando todas as etapas do negócio, 
+                                desde o desenvolvimento da ideia,<br>
+                                passando pela estruturação e vendas, até os investimentos.</p>
+                            <button>Saiba mais</button>
+                        </div>
+                        <div class="services-image">
+                            <img src="direito_civil.jpg" alt="Ilustração de empresas inovadoras">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="trabalhista" style="display: none;">
+                    <div class="services-content">
+                        <div class="services-text">
+                            <h3>Trabalhista</h3>
+                            <p> Rescisão de contrato, verbas rescisórias, <b>FGTS</b>.</p>
+                            <button>Saiba mais</button>
+                        </div>
+                        <div class="services-image">
+                            <img src="Copia-de-Artigos-Grossi-Bessa-2-1024x576.png" alt="Ilustração de empresas inovadoras">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="Tributario" style="display: none;">
+                    <div class="services-content">
+                        <div class="services-text">
+                            <h3>Tributario</h3>
+                            <p> Imposto de renda, dívidas com a fazenda.</p>
+                            <button>Saiba mais</button>
+                        </div>
+                        <div class="services-image">
+                            <img src="direito-tributario-1-1536x1009-1.jpg" alt="Ilustração de empresas inovadoras">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <section id="artigos">
+            <aside>
+                <h2>Recomendações</h2>
+                <ul>
+                    <li><a href="https://example.com/artigo1" target="_blank">Artigo 1</a></li>
+                    <li><a href="https://example.com/artigo2" target="_blank">E-book 1</a></li>
+                    <li><a href="https://example.com/artigo3" target="_blank">Artigo 2</a></li>
+                    <li><a href="https://example.com/artigo4" target="_blank">E-book 2</a></li>
+                </ul>
+            </aside>
+            <div class="gallery">
+                <a href="https://example.com/galeria1" target="_blank">Recurso 1</a>
+                <a href="https://example.com/galeria2" target="_blank">Recurso 2</a>
+                <a href="https://example.com/galeria3" target="_blank">Recurso 3</a>
+                <a href="https://example.com/galeria4" target="_blank">Recurso 4</a>
+                <a href="https://example.com/galeria5" target="_blank">Recurso 5</a>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section class="about" id="nosso-escritorio">
+            <div class="container">
+              <h2>Por que escolher nossos serviços?</h2>
+              <ol>
+                <li>Experiência: Nossa equipe possui vasta experiência em direito brasileiro.</li>
+                <li>Atendimento personalizado: Entendemos suas necessidades e oferecemos soluções sob medida.</li>
+                <li>Agilidade: Trabalhamos para resolver seus problemas de forma rápida e eficiente.</li>
+                <li>Segurança: Toda a documentação é tratada com sigilo.</li>
+              </ol>
+            <br>
+            <br>
+            <br>
+          </section>
+    </main>
+    <div class="buttonwtz">
+        <a href="https://api.whatsapp.com/send?phone=5534991462934" class="iconwtz" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <p> 2024 Carla Pena. Todos os direitos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class='bx bx-envelope'></i></a></li>
+                <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName('tab');
+            var tabContents = document.getElementsByClassName('tab-content');
+            
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = 'none';
+            }
+            
+            document.getElementById(tabId).style.display = 'block';
+            document.querySelector('.tab[onclick="showTab(\'' + tabId + '\')"]').classList.add('active');
+        }
+
+        // Menu Toggle
+        let menuIcon = document.querySelector('#menu-toggle');
+        let navUl = document.querySelector('#menu-list');
+
+        menuIcon.addEventListener('click', function() {
+            navUl.classList.toggle('show'); 
+        });
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

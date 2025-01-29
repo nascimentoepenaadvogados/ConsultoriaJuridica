@@ -1,0 +1,452 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li .btn {
+    background-color: #ffc107;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav ul.show {
+    /* estilos para quando o menu for exibido */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #604d4df7;
+    padding: 20px;
+    display: block;
+    width: 200px; /* ajuste a largura do menu */
+    height: 100vh; /* ajuste a altura do menu */
+    overflow-y: auto; /* adiciona uma barra de rolagem se necessário */
+}
+
+nav ul.show li {
+    display: block; /* muda o display para block para que os itens sejam exibidos um abaixo do outro */
+    margin-bottom: 50px;
+}
+
+
+.menu-icon {
+    display: none; 
+    color: #ffffff; 
+    float: right; 
+    margin-right: 20px; 
+    background-color: transparent; 
+    padding: 0; 
+    border: none; 
+}
+
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 910px) {
+    .menu-icon {
+        display: block; 
+    }
+    nav ul {
+        display: none; 
+    }
+    nav ul.show {
+        display: block; 
+    }
+}
+
+
+.hero {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    width: 50%;
+    margin-left: 12rem;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 20%;
+}
+
+.about {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+}
+
+.about button {
+    background-color: #ffc107;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.25rem;
+    color: #ffc107;
+}
+
+.services {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 4rem 0;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services-header h2 {
+    font-size: 2rem;
+}
+
+.services-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tab {
+    background-color: #ccc;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.tab.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.services-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-text {
+    width: 50%;
+}
+
+.services-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.services-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.services-text button {
+    background-color: #ffc107;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.services-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 10%;
+    margin-left: 10rem;
+}
+
+footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links {
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+.social-links li a {
+    color: #fff; /* Cor do ícone */
+    font-size: 24px; /* Tamanho ajustado */
+    display: inline-block;
+    background-color: transparent; /* Cor de fundo transparente */
+    padding: 0.5rem; /* Espaço ao redor do ícone */
+    border-radius: 50%; /* Torna o fundo circular */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Transição para hover */
+}
+
+.social-links li a:hover {
+    background-color: #555; /* Cor do fundo ao passar o mouse */
+    color: #fff; /* Cor do ícone ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para hover */
+}
+
+.social-links li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.iconwtz {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    font-size: 30px;
+    background-color: #01e675;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    z-index: 100;
+    box-shadow: 2px 2px 2px #c0bdbd;
+}
+
+.iconwtz fab{
+    padding-top: 9px;
+}
+
+.iconwtz:hover{
+    background-color: #fff;
+    color: #029e3b;
+    font-weight: 900;
+    box-shadow: 2px 2px 20px #5fe690;
+}
+
+/* Efeito de hover para botões */
+button:hover {
+    background-color: #737373; /* Cor de fundo do botão ao passar o mouse */
+    color: #fff; /* Cor do texto do botão ao passar o mouse */
+    transition: all 0.3s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+/* Efeito de hover para links com classe btn */
+a.btn:hover {
+    background-color: #918c8c; /* Cor de fundo do botão ao passar o mouse */
+    color: #fff; /* Cor do texto do botão ao passar o mouse */
+    transition: all 0.3s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+
+a.sbtn:hover {
+    background-color: #918c8c; /* Cor de fundo do botão ao passar o mouse */
+    color: #fff; /* Cor do texto do botão ao passar o mouse */
+    transition: all 0.3s ease-in-out; /* Transição suave para o efeito hover */
+}
+
+a.sbtn{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.social-links li a{
+    padding: 0.7rem 1rem;
+    border-radius: 100%;
+}
+
+.social-links li a:hover{
+    background-color: #bab6b6;
+    color: #ffffff;
+    font-weight: 900;
+    box-shadow: 2px 2px 20px #606863;
+}
+
+nav ul .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul .close-button:hover {
+    color: #333;
+}
+
+/* Seção de Artigos e E-books */
+section#artigos {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Lista lateral */
+aside {
+    width: 25%;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Galeria */
+.gallery {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.gallery a {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.gallery a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+ol {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+  }
+
+.tab-content p{
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 180%;
+}
