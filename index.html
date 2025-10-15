@@ -292,33 +292,44 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ===== CORREÇÃO DE LAYOUT DOS SERVIÇOS ===== */
     .services-content {
       display: flex;
       flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
       gap: 40px;
-      align-items: center;
+      margin-top: 30px;
     }
 
     .services-text {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .services-text h3, .services-text h4 {
-      margin: 15px 0 10px;
+      flex: 1 1 500px;
+      min-width: 280px;
+      max-width: 600px;
     }
 
     .services-image {
-      flex: 1;
+      flex: 1 1 400px;
       min-width: 280px;
+      max-width: 500px;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
+    .services-text p {
+      margin-bottom: 15px;
+    }
+
+    .services-text .btn {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
     .services-image img {
       width: 100%;
       height: auto;
+      display: block;
       object-fit: cover;
     }
 
@@ -472,6 +483,21 @@
         right: 0;
       }
 
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .services-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .services-text, .services-image {
+        max-width: 100%;
+      }
+
       .hero-text h2 {
         font-size: 1.8rem;
       }
@@ -484,11 +510,6 @@
       .tab {
         width: 100%;
         max-width: 300px;
-      }
-
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
       }
     }
   </style>
