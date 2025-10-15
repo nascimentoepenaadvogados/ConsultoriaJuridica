@@ -167,23 +167,47 @@
     .hero {
       background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
       padding: 80px 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
     }
 
     .dark-mode .hero {
       background: linear-gradient(135deg, #1a1f2f 0%, #121726 100%);
     }
 
+    .hero .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
     .hero-text h2 {
       font-size: 2.2rem;
       margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .dark-mode .hero-text h2 {
+      color: var(--accent);
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
     }
 
     .hero-image img {
-      max-height: 400px;
       border-radius: 8px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
@@ -256,11 +280,11 @@
 
     .tab-content {
       display: none;
-      animation: fadeIn 0.5s ease;
     }
 
     .tab-content.active {
       display: block;
+      animation: fadeIn 0.5s ease;
     }
 
     @keyframes fadeIn {
@@ -294,7 +318,7 @@
 
     .services-image img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
     }
 
@@ -321,17 +345,14 @@
       font-size: 1.1rem;
     }
 
-    .about:nth-of-type(2) a {
-      display: inline-block;
+    .about:nth-of-type(2) .btn {
       background: var(--accent);
       color: var(--primary);
-      padding: 12px 30px;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: var(--transition);
+      display: inline-block;
+      margin-top: 20px;
     }
 
-    .about:nth-of-type(2) a:hover {
+    .about:nth-of-type(2) .btn:hover {
       background: #c19a2e;
       transform: scale(1.05);
     }
@@ -464,6 +485,11 @@
         width: 100%;
         max-width: 300px;
       }
+
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -492,12 +518,14 @@
   <main>
     <section class="hero" data-aos="fade-up">
       <div class="container">
-        <div class="hero-text">
-          <h2>Assessoria e Consultoria Jurídica para Brasileiros em Portugal</h2>
-          <p>Mais que serviços jurídicos, geramos oportunidades e um diferencial competitivo para o seu sonho.</p>
-        </div>
-        <div class="hero-image">
-          <img src="me_fa_a_uma_imagem_sobre_o_mundo_juridico_para_um_site_de_advocacia_realista_sem_humanos_apenas_os_livros_e_a_balan_a.png" alt="Mundo jurídico" loading="lazy">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2>Assessoria e Consultoria Jurídica para Brasileiros em Portugal</h2>
+            <p>Mais que serviços jurídicos, geramos oportunidades e um diferencial competitivo para o seu sonho.</p>
+          </div>
+          <div class="hero-image">
+            <img src="me_fa_a_uma_imagem_sobre_o_mundo_juridico_para_um_site_de_advocacia_realista_sem_humanos_apenas_os_livros_e_a_balan_a.png" alt="Mundo jurídico" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
@@ -508,7 +536,7 @@
         <p>Somos especialistas em atender brasileiros que residem em Portugal e necessitam de serviços jurídicos no Brasil. Nosso time é composto por uma equipe qualificada, atualizada e especialista em Direito Empresarial, com foco em assessoria jurídica para Startups e Empresas Inovadoras, atuando nessa área desde 2014.</p>
         <div class="team" data-aos="zoom-in">
           <div class="team-member">
-            <img src="Me_fa_a_um_avatar_para_uma_advogada.png" alt="Carla Cristiane N e Pena" loading="lazy">
+            <img src="Me_fa_a_um_avatar_para_uma_advogada.png" alt="Carla Cristiane Nascimento e Pena" loading="lazy">
             <h3>Carla Cristiane Nascimento e Pena</h3>
             <p>OAB: 104.297</p>
           </div>
@@ -554,7 +582,7 @@
               <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
             </div>
             <div class="services-image">
-              <img src="direito_civil.jpg" alt="Startups" loading="lazy">
+              <img src="direito-empresarial.jpg" alt="Startups e Inovação" loading="lazy">
             </div>
           </div>
         </div>
@@ -616,7 +644,7 @@
           <li><strong>Agilidade:</strong> Respostas rápidas e eficazes.</li>
           <li><strong>Segurança:</strong> Sigilo absoluto em todos os processos.</li>
         </ol>
-        <a href="tel:+5534993169244" style="font-size: 24px; font-weight: bold; color: white; display: inline-block; margin-top: 20px;">+55 (34) 99316-9244</a>
+        <a href="tel:+5534993169244" class="btn">+55 (34) 99316-9244</a>
       </div>
     </section>
   </main>
@@ -657,6 +685,13 @@
         button.classList.add('active');
         document.getElementById(tabId).classList.add('active');
       });
+    });
+
+    // Garantir que a primeira aba esteja ativa ao carregar
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstTab = document.querySelector('.tab.active');
+      const firstContentId = firstTab.getAttribute('data-tab');
+      document.getElementById(firstContentId).classList.add('active');
     });
 
     // Mobile Menu
