@@ -15,7 +15,6 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
   <style>
-    /* ===== VARIÁVEIS DE CORES ===== */
     :root {
       --primary: #0d2b5c;
       --secondary: #1a4b8c;
@@ -29,20 +28,7 @@
       --transition: all 0.3s ease;
     }
 
-    .dark-mode {
-      --light-bg: #121212;
-      --dark-bg: #1e1e1e;
-      --light-text: #f0f0f0;
-      --dark-text: #f0f0f0;
-      --card-bg: #1e1e1e;
-    }
-
-    /* ===== RESET & BASE ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,23 +51,7 @@
       color: var(--primary);
     }
 
-    .dark-mode h1,
-    .dark-mode h2,
-    .dark-mode h3,
-    .dark-mode h4 {
-      color: var(--accent);
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+    a { text-decoration: none; color: inherit; }
 
     button, .btn {
       background: var(--primary);
@@ -100,23 +70,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    section {
-      padding: 60px 0;
-    }
+    section { padding: 60px 0; }
 
-    /* ===== HEADER ===== */
     header {
       background: var(--light-bg);
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: background 0.3s;
-    }
-
-    .dark-mode header {
-      background: var(--dark-bg);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     header .container {
@@ -124,23 +85,6 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
-    }
-
-    header h1 {
-      font-size: 28px;
-    }
-
-    .menu-icon {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      color: var(--primary);
-      cursor: pointer;
-    }
-
-    .dark-mode .menu-icon i {
-      color: white;
     }
 
     nav ul {
@@ -155,22 +99,11 @@
       transition: var(--transition);
     }
 
-    nav a:hover {
-      color: var(--primary);
-    }
+    nav a:hover { color: var(--primary); }
 
-    .dark-mode nav a:hover {
-      color: var(--accent);
-    }
-
-    /* ===== HERO ===== */
     .hero {
       background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
       padding: 80px 0;
-    }
-
-    .dark-mode .hero {
-      background: linear-gradient(135deg, #1a1f2f 0%, #121726 100%);
     }
 
     .hero .container {
@@ -186,43 +119,15 @@
       width: 100%;
     }
 
-    .hero-text {
-      flex: 1;
-      min-width: 300px;
-    }
+    .hero-text { flex: 1; min-width: 300px; }
+    .hero-text h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--primary); }
+    .hero-image { flex: 1; min-width: 280px; max-width: 500px; }
+    .hero-image img { border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-    .hero-text h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
+    /* ===== SOBRE / QUEM SOMOS ===== */
+    .about { background: var(--light-bg); }
 
-    .dark-mode .hero-text h2 {
-      color: var(--accent);
-    }
-
-    .hero-image {
-      flex: 1;
-      min-width: 280px;
-      max-width: 500px;
-    }
-
-    .hero-image img {
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    /* ===== ABOUT / SERVICES ===== */
-    .about, .services {
-      background: var(--light-bg);
-    }
-
-    .dark-mode .about,
-    .dark-mode .services {
-      background: var(--dark-bg);
-    }
-
-    .about h2, .services-header h2 {
+    .about h2 {
       text-align: center;
       margin-bottom: 30px;
       font-size: 2rem;
@@ -231,6 +136,19 @@
     .about p {
       margin-bottom: 20px;
       font-size: 1.05rem;
+      text-align: center;
+    }
+
+    /* Centralização do avatar e texto */
+    .team {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      text-align: center;
     }
 
     .team-member img {
@@ -242,106 +160,18 @@
       border: 3px solid var(--primary);
     }
 
-    /* ===== SERVICES TABS ===== */
-    .services-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-
-    .tab {
-      background: #f1f5ff;
-      color: var(--gray);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    .dark-mode .tab {
-      background: #2a2a3a;
-      color: #ccc;
-    }
-
-    .tab.active, .tab:hover {
-      background: var(--primary);
-      color: white;
-    }
-
-    .dark-mode .tab.active,
-    .dark-mode .tab:hover {
-      background: var(--accent);
-      color: var(--primary);
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-      animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== CORREÇÃO DE LAYOUT DOS SERVIÇOS ===== */
-    .services-content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 40px;
-      margin-top: 30px;
-    }
-
-    .services-text {
-      flex: 1 1 500px;
-      min-width: 280px;
-      max-width: 600px;
-    }
-
-    .services-image {
-      flex: 1 1 400px;
-      min-width: 280px;
-      max-width: 500px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-
-    .services-text p {
-      margin-bottom: 15px;
-    }
-
-    .services-text .btn {
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .services-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    /* ===== WHY CHOOSE US ===== */
+    /* ===== POR QUE ESCOLHER ===== */
     .about:nth-of-type(2) {
       background: var(--primary);
       color: white;
       text-align: center;
+      padding-bottom: 80px; /* espaçamento extra */
     }
 
-    .dark-mode .about:nth-of-type(2) {
-      background: #0a1f40;
+    .about:nth-of-type(2) .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .about:nth-of-type(2) ol {
@@ -360,7 +190,9 @@
       background: var(--accent);
       color: var(--primary);
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 30px;
+      position: relative;
+      z-index: 1;
     }
 
     .about:nth-of-type(2) .btn:hover {
@@ -368,35 +200,12 @@
       transform: scale(1.05);
     }
 
-    /* ===== WHATSAPP BUTTON ===== */
+    /* ===== WHATSAPP ===== */
     .buttonwtz {
       position: fixed;
       bottom: 90px;
       right: 20px;
       z-index: 999;
-    }
-
-    .dark-mode-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--light-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      cursor: pointer;
-      z-index: 998;
-      font-size: 18px;
-      color: var(--primary);
-    }
-
-    .dark-mode .dark-mode-toggle {
-      background: var(--dark-bg);
-      color: var(--accent);
     }
 
     .iconwtz {
@@ -418,19 +227,12 @@
       box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
     }
 
-    /* ===== FOOTER ===== */
     footer {
       background: var(--light-bg);
       color: var(--light-text);
       padding: 30px 0;
       text-align: center;
       border-top: 1px solid #eee;
-    }
-
-    .dark-mode footer {
-      background: var(--dark-bg);
-      color: var(--dark-text);
-      border-top: 1px solid #333;
     }
 
     .social-links {
@@ -446,87 +248,20 @@
       transition: var(--transition);
     }
 
-    .dark-mode .social-links a {
-      color: var(--accent);
-    }
+    .social-links a:hover { transform: translateY(-3px); }
 
-    .social-links a:hover {
-      transform: translateY(-3px);
-    }
-
-    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      nav ul {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        background: var(--light-bg);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        transition: var(--transition);
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-      }
-
-      .dark-mode nav ul {
-        background: var(--dark-bg);
-      }
-
-      nav ul.show {
-        right: 0;
-      }
-
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .services-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .services-text, .services-image {
-        max-width: 100%;
-      }
-
-      .hero-text h2 {
-        font-size: 1.8rem;
-      }
-
-      .services-tabs {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tab {
-        width: 100%;
-        max-width: 300px;
-      }
+      .hero-content { flex-direction: column; text-align: center; }
+      .about:nth-of-type(2) ol { text-align: left; }
     }
   </style>
 </head>
-<body>
-  <!-- Dark Mode Toggle -->
-  <div class="dark-mode-toggle" id="darkModeToggle">
-    <i class="fas fa-moon"></i>
-  </div>
 
+<body>
   <header data-aos="fade-down">
     <div class="container">
       <h1>N&P</h1>
       <nav>
-        <button id="menu-toggle" class="menu-icon">
-          <i class='bx bx-menu'></i>
-        </button>
         <ul id="menu-list">
           <li><a href="#nosso-escritorio">Nosso escritório</a></li>
           <li><a href="#especialidades">Especialidades</a></li>
@@ -565,97 +300,6 @@
       </div>
     </section>
 
-    <section class="services" id="especialidades" data-aos="fade-up">
-      <div class="container">
-        <div class="services-header">
-          <h2>Especialidades</h2>
-          <div class="services-tabs">
-            <button class="tab active" data-tab="Empresarial">Empresarial</button>
-            <button class="tab" data-tab="empresas">Empresas Inovadoras</button>
-            <button class="tab" data-tab="trabalhista">Trabalhista</button>
-            <button class="tab" data-tab="Tributario">Tributário</button>
-            <button class="tab" data-tab="Imobiliario">Imobiliário</button>
-          </div>
-        </div>
-
-        <div class="tab-content active" id="Empresarial">
-          <div class="services-content">
-            <div class="services-text">
-              <h3>Empresarial</h3>
-              <h4>Abertura e Encerramento de Empresas</h4>
-              <p>Oferecemos suporte completo em todos os processos necessários para a abertura e encerramento de empresas, garantindo conformidade com a legislação.</p>
-              <h4>Contratos</h4>
-              <p>Elaboração, revisão e negociação de contratos empresariais, assegurando proteção jurídica em transações comerciais.</p>
-              <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
-            </div>
-            <div class="services-image">
-              <img src="direito-empresarial.jpg" alt="Direito Empresarial" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="empresas">
-          <div class="services-content">
-            <div class="services-text">
-              <h3>Empresas Inovadoras</h3>
-              <h4>Startups</h4>
-              <p>Startups precisam de acompanhamento jurídico estratégico desde a ideia até investimentos. Oferecemos assessoria completa em todas as etapas.</p>
-              <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
-            </div>
-            <div class="services-image">
-              <img src="direito-empresarial.jpg" alt="Startups e Inovação" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="trabalhista">
-          <div class="services-content">
-            <div class="services-text">
-              <h3>Trabalhista</h3>
-              <h4>Rescisão de Contrato</h4>
-              <p>Acompanhamos todo o processo de rescisão, garantindo direitos e deveres conforme a lei.</p>
-              <h4>Verbas Rescisórias & FGTS</h4>
-              <p>Orientamos cálculos e consultoria sobre FGTS, saques e regularizações.</p>
-              <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
-            </div>
-            <div class="services-image">
-              <img src="Copia-de-Artigos-Grossi-Bessa-2-1024x576.png" alt="Direito Trabalhista" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="Tributario">
-          <div class="services-content">
-            <div class="services-text">
-              <h3>Tributário</h3>
-              <h4>Imposto de Renda</h4>
-              <p>Consultoria para declaração, planejamento fiscal e conformidade.</p>
-              <h4>Dívidas com a Fazenda</h4>
-              <p>Negociação e regularização de débitos fiscais com soluções personalizadas.</p>
-              <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
-            </div>
-            <div class="services-image">
-              <img src="direito-tributario-1-1536x1009-1.jpg" alt="Direito Tributário" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-content" id="Imobiliario">
-          <div class="services-content">
-            <div class="services-text">
-              <h3>Imobiliário</h3>
-              <h4>Inventários e Sucessões</h4>
-              <p>Assistência completa em inventários, testamentos, partilha de bens e resolução de conflitos hereditários.</p>
-              <a href="https://api.whatsapp.com/send?phone=5534993169244" class="btn">Saiba mais</a>
-            </div>
-            <div class="services-image">
-              <img src="Direito-imobiliario.png" alt="Direito Imobiliário" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="about" data-aos="fade-up">
       <div class="container">
         <h2>Por que escolher nossos serviços?</h2>
@@ -687,62 +331,7 @@
     </div>
   </footer>
 
-  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <script>
-    // Inicializa AOS
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-
-    // Tabs
-    document.querySelectorAll('.tab').forEach(button => {
-      button.addEventListener('click', () => {
-        const tabId = button.getAttribute('data-tab');
-        document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        button.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-      });
-    });
-
-    // Garantir que a primeira aba esteja ativa ao carregar
-    document.addEventListener('DOMContentLoaded', () => {
-      const firstTab = document.querySelector('.tab.active');
-      const firstContentId = firstTab.getAttribute('data-tab');
-      document.getElementById(firstContentId).classList.add('active');
-    });
-
-    // Mobile Menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuList = document.getElementById('menu-list');
-    menuToggle.addEventListener('click', () => menuList.classList.toggle('show'));
-    document.querySelectorAll('#menu-list a').forEach(link => {
-      link.addEventListener('click', () => menuList.classList.remove('show'));
-    });
-
-    // Dark Mode
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-    const icon = darkModeToggle.querySelector('i');
-
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      body.classList.add('dark-mode');
-      icon.classList.replace('fa-moon', 'fa-sun');
-    }
-
-    darkModeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'enabled');
-        icon.classList.replace('fa-moon', 'fa-sun');
-      } else {
-        localStorage.setItem('darkMode', 'disabled');
-        icon.classList.replace('fa-sun', 'fa-moon');
-      }
-    });
-  </script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
