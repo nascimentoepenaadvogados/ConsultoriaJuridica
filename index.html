@@ -158,20 +158,25 @@
 
     nav a:hover {
       color: var(--primary);
+      transform: scale(1.05);
     }
 
     .dark-mode nav a:hover {
       color: var(--accent);
+      transform: scale(1.05);
     }
 
     /* ===== HERO ===== */
     .hero {
       background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
+      background-attachment: fixed;
+      background-position: center;
       padding: 80px 0;
     }
 
     .dark-mode .hero {
       background: linear-gradient(135deg, #1a1f2f 0%, #121726 100%);
+      background-attachment: fixed;
     }
 
     .hero .container {
@@ -245,6 +250,12 @@
       object-fit: cover;
       margin-bottom: 15px;
       border: 3px solid var(--primary);
+      transition: transform 0.4s ease;
+    }
+
+    .team-member img:hover {
+      transform: rotate(5deg) scale(1.1);
+      box-shadow: 0 0 15px var(--accent);
     }
 
     /* ===== SERVICES TABS ===== */
@@ -336,6 +347,11 @@
       height: auto;
       display: block;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .services-image:hover img {
+      transform: scale(1.05);
     }
 
     /* ===== WHY CHOOSE US ===== */
@@ -405,6 +421,12 @@
       color: var(--accent);
     }
 
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
     .iconwtz {
       display: flex;
       align-items: center;
@@ -417,6 +439,7 @@
       font-size: 28px;
       box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
       transition: var(--transition);
+      animation: pulse 2s infinite ease-in-out;
     }
 
     .iconwtz:hover {
@@ -539,7 +562,7 @@
 
     .about:nth-of-type(2) {
       text-align: center;
-      padding-bottom: 80px; /* Garante espaço extra abaixo do botão */
+      padding-bottom: 80px;
     }
 
     .about:nth-of-type(2) .container {
@@ -553,7 +576,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; /* garante centralização vertical */
+      flex-direction: column;
       text-align: center;
       margin-top: 40px;
     }
@@ -568,35 +591,35 @@
 </head>
 <body>
   <!-- Dark Mode Toggle -->
-  <div class="dark-mode-toggle" id="darkModeToggle">
+  <div class="dark-mode-toggle" id="darkModeToggle" data-aos="fade-up" data-aos-delay="400">
     <i class="fas fa-moon"></i>
   </div>
 
-  <header data-aos="fade-down">
+  <header data-aos="fade-down" data-aos-duration="600">
     <div class="container">
-      <h1>N&P</h1>
+      <h1 data-aos="fade-right" data-aos-delay="100">N&P</h1>
       <nav>
         <button id="menu-toggle" class="menu-icon">
           <i class='bx bx-menu'></i>
         </button>
         <ul id="menu-list">
-          <li><a href="#nosso-escritorio">Nosso escritório</a></li>
-          <li><a href="#especialidades">Especialidades</a></li>
-          <li><a href="#footer">Fale Conosco</a></li>
+          <li><a href="#nosso-escritorio" data-aos="fade-in" data-aos-delay="200">Nosso escritório</a></li>
+          <li><a href="#especialidades" data-aos="fade-in" data-aos-delay="300">Especialidades</a></li>
+          <li><a href="#footer" data-aos="fade-in" data-aos-delay="400">Fale Conosco</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" data-aos="fade-up">
+    <section class="hero" data-aos="fade-up" data-aos-duration="1000">
       <div class="container">
         <div class="hero-content">
-          <div class="hero-text">
+          <div class="hero-text" data-aos="fade-left" data-aos-delay="200">
             <h2>Assessoria e Consultoria Jurídica para Brasileiros em Portugal</h2>
             <p>Mais que serviços jurídicos, geramos oportunidades e um diferencial competitivo para o seu sonho.</p>
           </div>
-          <div class="hero-image">
+          <div class="hero-image" data-aos="fade-right" data-aos-delay="400">
             <img src="me_fa_a_uma_imagem_sobre_o_mundo_juridico_para_um_site_de_advocacia_realista_sem_humanos_apenas_os_livros_e_a_balan_a.png" alt="Mundo jurídico" loading="lazy">
           </div>
         </div>
@@ -605,9 +628,9 @@
 
     <section class="about" id="nosso-escritorio" data-aos="fade-up">
       <div class="container">
-        <h2>Quem somos?</h2>
-        <p>Somos especialistas em atender brasileiros que residem em Portugal e necessitam de serviços jurídicos no Brasil. Nosso time é composto por uma equipe qualificada, atualizada e especialista em Direito Empresarial, com foco em assessoria jurídica para Startups e Empresas Inovadoras, atuando nessa área desde 2014.</p>
-        <div class="team" data-aos="zoom-in">
+        <h2 data-aos="fade-down" data-aos-delay="100">Quem somos?</h2>
+        <p data-aos="fade-up" data-aos-delay="200">Somos especialistas em atender brasileiros que residem em Portugal e necessitam de serviços jurídicos no Brasil. Nosso time é composto por uma equipe qualificada, atualizada e especialista em Direito Empresarial, com foco em assessoria jurídica para Startups e Empresas Inovadoras, atuando nessa área desde 2014.</p>
+        <div class="team" data-aos="zoom-in" data-aos-delay="300">
           <div class="team-member">
             <img src="Me_fa_a_um_avatar_para_uma_advogada.png" alt="Carla Cristiane Nascimento e Pena" loading="lazy">
             <h3>Carla Cristiane Nascimento e Pena</h3>
@@ -620,17 +643,17 @@
     <section class="services" id="especialidades" data-aos="fade-up">
       <div class="container">
         <div class="services-header">
-          <h2>Especialidades</h2>
-          <div class="services-tabs">
-            <button class="tab active" data-tab="Empresarial">Empresarial</button>
-            <button class="tab" data-tab="empresas">Empresas Inovadoras</button>
-            <button class="tab" data-tab="trabalhista">Trabalhista</button>
-            <button class="tab" data-tab="Tributario">Tributário</button>
-            <button class="tab" data-tab="Imobiliario">Imobiliário</button>
+          <h2 data-aos="fade-down" data-aos-delay="100">Especialidades</h2>
+          <div class="services-tabs" data-aos="fade-in" data-aos-delay="200">
+            <button class="tab active" data-tab="Empresarial" data-aos="fade-in" data-aos-delay="300">Empresarial</button>
+            <button class="tab" data-tab="empresas" data-aos="fade-in" data-aos-delay="400">Empresas Inovadoras</button>
+            <button class="tab" data-tab="trabalhista" data-aos="fade-in" data-aos-delay="500">Trabalhista</button>
+            <button class="tab" data-tab="Tributario" data-aos="fade-in" data-aos-delay="600">Tributário</button>
+            <button class="tab" data-tab="Imobiliario" data-aos="fade-in" data-aos-delay="700">Imobiliário</button>
           </div>
         </div>
 
-        <div class="tab-content active" id="Empresarial">
+        <div class="tab-content active" id="Empresarial" data-aos="slide-up" data-aos-duration="800">
           <div class="services-content">
             <div class="services-text">
               <h3>Empresarial</h3>
@@ -646,7 +669,7 @@
           </div>
         </div>
 
-        <div class="tab-content" id="empresas">
+        <div class="tab-content" id="empresas" data-aos="slide-up" data-aos-duration="800">
           <div class="services-content">
             <div class="services-text">
               <h3>Empresas Inovadoras</h3>
@@ -660,7 +683,7 @@
           </div>
         </div>
 
-        <div class="tab-content" id="trabalhista">
+        <div class="tab-content" id="trabalhista" data-aos="slide-up" data-aos-duration="800">
           <div class="services-content">
             <div class="services-text">
               <h3>Trabalhista</h3>
@@ -676,7 +699,7 @@
           </div>
         </div>
 
-        <div class="tab-content" id="Tributario">
+        <div class="tab-content" id="Tributario" data-aos="slide-up" data-aos-duration="800">
           <div class="services-content">
             <div class="services-text">
               <h3>Tributário</h3>
@@ -692,7 +715,7 @@
           </div>
         </div>
 
-        <div class="tab-content" id="Imobiliario">
+        <div class="tab-content" id="Imobiliario" data-aos="slide-up" data-aos-duration="800">
           <div class="services-content">
             <div class="services-text">
               <h3>Imobiliário</h3>
@@ -710,16 +733,16 @@
 
     <section class="about" data-aos="fade-up">
       <div class="container">
-        <h2>Por que escolher nossos serviços?</h2>
+        <h2 data-aos="fade-down">Por que escolher nossos serviços?</h2>
         <ol>
-          <li><strong>Experiência:</strong> Atuação desde 2014 em direito empresarial e inovação.</li>
-          <li><strong>Atendimento personalizado:</strong> Soluções sob medida para cada cliente.</li>
-          <li><strong>Agilidade:</strong> Respostas rápidas e eficazes.</li>
-          <li><strong>Segurança:</strong> Sigilo absoluto em todos os processos.</li>
+          <li data-aos="fade-up" data-aos-delay="100"><strong>Experiência:</strong> Atuação desde 2014 em direito empresarial e inovação.</li>
+          <li data-aos="fade-up" data-aos-delay="200"><strong>Atendimento personalizado:</strong> Soluções sob medida para cada cliente.</li>
+          <li data-aos="fade-up" data-aos-delay="300"><strong>Agilidade:</strong> Respostas rápidas e eficazes.</li>
+          <li data-aos="fade-up" data-aos-delay="400"><strong>Segurança:</strong> Sigilo absoluto em todos os processos.</li>
         </ol>
         <br>
         <br>
-        <a href="tel:+5534993169244" class="btn">+55 (34) 99316-9244</a>
+        <a href="tel:+5534993169244" class="btn" data-aos="zoom-in" data-aos-delay="500">+55 (34) 99316-9244</a>
       </div>
     </section>
   </main>
@@ -730,7 +753,7 @@
     </a>
   </div>
 
-  <footer id="footer" data-aos="fade-up">
+  <footer id="footer" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
       <p>© 2025 Carla Pena. Todos os direitos reservados.</p>
       <ul class="social-links">
@@ -748,7 +771,9 @@
     // Inicializa AOS
     AOS.init({
       duration: 800,
-      once: true
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out'
     });
 
     // Tabs
@@ -759,6 +784,7 @@
         document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         button.classList.add('active');
         document.getElementById(tabId).classList.add('active');
+        AOS.refresh();
       });
     });
 
